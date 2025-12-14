@@ -24,15 +24,15 @@ function Header() {
                       <li class="nav-item">
                           <a class="nav-link" href="#experience">Experience</a>
                       </li>
-                      {/* <li class="nav-item">
+                      <li class="nav-item">
                           <a class="nav-link" href="#testmonial">Testmonial</a>
-                      </li> */}
+                      </li>
                       <li class="nav-item">
                           <a class="nav-link" href="#blog">Blog</a>
                       </li>
-                      <li class="nav-item">
+                      {/* <li class="nav-item">
                           <a class="nav-link" href="#contact">Contact</a>
-                      </li>
+                      </li> */}
                       <li class="nav-item">
                           <a class="- btn btn-primary rounded ml-4" href="#contact">Contact Me</a>
                       </li>
