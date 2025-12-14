@@ -33,11 +33,11 @@ function Contact() {
                         <div class="card-body text-light">
                             <div class="row align-items-center">
                                 <div class="col-sm-9 text-center text-sm-left">
-                                <h5 class="mt-3">Hire Me For Your Project</h5>
-                                <p class="mb-3">Looking for a skilled QA professional to ensure the quality of your software? Let's collaborate to deliver exceptional results and elevate your project to the next level.</p>
+                                <h5 class="mt-3">Let's Work Together</h5>
+                                <p class="mb-3">Need a dedicated accounting professional for your business? I specialize in full-cycle bookkeeping, payroll processing, tax preparation, and financial reporting. Let's discuss how I can help streamline your accounting operations.</p>
                                 </div>
                                 <div class="col-sm-3 text-center text-sm-right">
-                                    <a href="mailto:prajjwalsubedi95@gmail.com"><button class="btn btn-light rounded">Hire Me!</button></a>
+                                    <a href="mailto:prajjwalsubedi95@gmail.com"><button class="btn btn-light rounded">Contact Me!</button></a>
                                 </div>
                             </div>
                         </div>
@@ -51,12 +51,12 @@ function Contact() {
                 <div class="container text-center">
                 <h6 class="subtitle">Contact</h6>
                 <h6 class="section-title mb-4">Get In Touch</h6>
-                <p class="mb-5 pb-4">I'd love to hear from you! Whether you have a question, need assistance, or want to discuss a project, feel free to reach out. <br />
-                    Let's connect and explore how we can work together.</p>
+                <p class="mb-5 pb-4">I'd love to hear from you! Whether you're looking for accounting support, have questions about my services, or want to discuss your business needs, feel free to reach out. <br />
+                    Let's connect and explore how I can help with your accounting and financial requirements.</p>
                     <div class="contact text-left">
                         <div class="form">
-                            <h6 class="subtitle">Available on Office hours</h6>
-                            <h6 class="section-title mb-4">Get In Touch</h6>
+                            <h6 class="subtitle">Available during business hours</h6>
+                            <h6 class="section-title mb-4">Send a Message</h6>
                             <form ref={form} onSubmit={sendEmail}>
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="exampleInputName"
@@ -83,7 +83,7 @@ function Contact() {
                                 <i class="ti-location-pin"></i>
                                 <div class="">
                                     <h5>Location</h5>
-                                    <p>Broad Run, Virginia, USA</p>
+                                    <p>Manassas, Virginia, USA</p>
                                 </div>
                             </div>
                             <div class="item">
@@ -113,4 +113,3 @@ function Contact() {
   }
   
   export default Contact;
-  

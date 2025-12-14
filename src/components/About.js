@@ -10,14 +10,16 @@ function About() {
                         </div>
                         <div class="pl-md-4 col-md-9">
                             <h6 class="title">Prajjwal Subedi</h6>
-                            <p class="subtitle">Software Development Engineer in Test</p>
-                            <p>I am Prajjwal Subedi, a seasoned Software Test Engineer and SDET with over six years of
-                                experience in Software Quality Assurance and Testing. My expertise lies in developing and
-                                maintaining automation frameworks using tools like Selenium WebDriver, Maven, and Jenkins. I’ve
-                                worked across various industries, including finance and automotive, where I’ve played a key role
-                                in ensuring the quality and reliability of software products. My experience spans both manual
-                                and automated testing, API testing, and working in Agile environments. I’m passionate about
-                                delivering high-quality software and continuously improving testing processes.</p>
+                            <p class="subtitle">Staff & Tax Accountant | CPA Firm</p>
+                            <p>I am Prajjwal Subedi, a detail-oriented accounting professional with over four years of 
+                                progressive experience in full-cycle accounting, multi-client payroll processing, and financial 
+                                reporting. My expertise lies in managing bookkeeping and payroll operations for 75+ clients 
+                                while ensuring 100% compliance with federal and state tax regulations. I've worked extensively 
+                                with QuickBooks Online/Desktop, Xero, and Oracle ERP systems across diverse industries including 
+                                retail, healthcare, and professional services. My experience spans payroll tax filings, GL 
+                                reconciliations, month-end close procedures, and tax return preparation. I'm passionate about 
+                                delivering accurate financial reporting, streamlining accounting processes, and helping businesses 
+                                maintain financial clarity and compliance.</p>
                                 <a href="assets/resume/PRAJJWAL_SUBEDI_Resume.pdf"><button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button></a>
                         </div>
                     </div>
@@ -28,4 +30,3 @@ function About() {
   }
   
   export default About;
-  

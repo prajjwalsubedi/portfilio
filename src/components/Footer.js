@@ -14,8 +14,7 @@ function Footer() {
                         </div>
                         <div class="col-sm-6">
                             <div class="socials">
-                            <a class="social-item" href="https://www.linkedin.com/in/prajjwal-subedi"><i class="ti-linkedin"></i></a>
-                            <a class="social-item" href="https://github.com/prajjwalsubedi"><i class="ti-github"></i></a>
+                            <a class="social-item" href="https://www.linkedin.com/in/prajjwalsubedi"><i class="ti-linkedin"></i></a>
                             <a class="social-item" href="https://twitter.com/prazwolsubedi"><i class="ti-twitter"></i></a>
                             </div>
                         </div>

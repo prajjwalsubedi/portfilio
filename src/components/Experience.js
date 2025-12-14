@@ -6,45 +6,32 @@ function Experience() {
                 <div class="container text-center">
                     <h6 class="subtitle">Experience</h6>
                     <h6 class="section-title mb-4">Highlights of My Professional Journey</h6>
-                    <p class="mb-5 pb-4">Explore key roles and projects that showcase my expertise in software testing and
-                        quality assurance.</p>
+                    <p class="mb-5 pb-4">Explore key roles and achievements that showcase my expertise in accounting, bookkeeping,
+                        and financial management.</p>
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-6">
                             <div class="card testmonial-card border">
                                 <div class="card-body">
-                                    <h1 class="title">Software Development Engineer in Test</h1>
-                                    <h1 class="subtitle">Apartments.com</h1>
-                                    <p><br />December 2022 - Present<br />Worked with agile teams to develop automation frameworks
-                                        and scripts using Java, Selenium, and Maven. Conducted browser compatibility and
-                                        regression tests, managed API testing with REST Assured and Postman.
+                                    <h1 class="title">Staff Accountant</h1>
+                                    <h1 class="subtitle">Frye & Company, CPAs</h1>
+                                    <p><br />April 2025 - Present<br />Process payroll for 15+ clients, manage full-cycle bookkeeping 
+                                        for 25+ businesses, execute month-end close procedures, and prepare individual and business 
+                                        tax returns for CPA review.
                                     </p>
-                                    <button class="btn btn-primary rounded" type="button" data-toggle="modal" data-target="#sdet">Learn More</button>
+                                    <button class="btn btn-primary rounded" type="button" data-toggle="modal" data-target="#staffAccountant">Learn More</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-6">
                             <div class="card testmonial-card border">
                                 <div class="card-body">
-                                    <h1 class="title">Test Automation Engineer</h1>
-                                    <h1 class="subtitle">General Motors</h1>
-                                    <p><br />July 2020 - December 2022<br />Automated regression and functional test suites using
-                                        Selenium and TestNG. Managed test execution across platforms with Selenium Grid,
-                                        integrated Jenkins for continuous integration and deployment.<br />
+                                    <h1 class="title">Tax Accountant</h1>
+                                    <h1 class="subtitle">Logic Accountants Pty Ltd</h1>
+                                    <p><br />April 2021 - April 2025<br />Managed payroll for 50+ clients, conducted comprehensive bank 
+                                        and GL reconciliations, prepared BAS/IAS tax returns, and automated financial reporting 
+                                        processes reducing close time by 30%.<br />
                                     </p>
-                                    <button class="btn btn-primary rounded" type="button" data-toggle="modal" data-target="#testAutomationEngineer">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="card testmonial-card border">
-                                <div class="card-body">
-                                    <h1 class="title">QA Engineer</h1>
-                                    <h1 class="subtitle">Bank of New York</h1>
-                                    <p><br />January 2018 - June 2020<br />Executed manual and automated tests, developed automation
-                                        scripts for web applications, and integrated tests with Jenkins. Created and maintained
-                                        test data and scripts for thorough functional and regression testing.
-                                    </p>
-                                    <button class="btn btn-primary rounded" type="button" data-toggle="modal" data-target="#qaEngineer">Learn More</button>
+                                    <button class="btn btn-primary rounded" type="button" data-toggle="modal" data-target="#taxAccountant">Learn More</button>
                                 </div>
                             </div>
                         </div>
@@ -52,53 +39,32 @@ function Experience() {
                 </div>
             </section>
 
-            {/* < />!-- Modals --> */}
-            <div class="modal" tabindex="-1" role="dialog" id="sdet">
+            {/* <!-- Modals --> */}
+            <div class="modal" tabindex="-1" role="dialog" id="staffAccountant">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title fs-5" id="staticBackdropLabel">Software Development Engineer in Test <br /></h4>
+                            <h4 class="modal-title fs-5" id="staticBackdropLabel">Staff Accountant<br /></h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <h5 class="modal-title fs-5" id="staticBackdropLabel">Apartments.com<br /></h5>
-                            <p><strong>December 2022 - Present</strong></p>
+                            <h5 class="modal-title fs-5" id="staticBackdropLabel">Frye & Company, CPAs - Manassas, VA<br /></h5>
+                            <p><strong>April 2025 - Present</strong></p>
                             <ul>
-                                <li>Worked in agile scrum methodology. Attended daily standup meetings.</li>
-                                <li>Created automation test scripts using data-driven framework and Page Object Model with
-                                    Selenium WebDriver, Java, and Maven.</li>
-                                <li>Developed automation frameworks using Java, Selenium, and Maven.</li>
-                                <li>Prepared test design approaches by collaborating with the team and developers.</li>
-                                <li>Utilized Page Object Model, UI Mapping, and Selenium Data Driven with CSV and CSS Selectors.
-                                </li>
-                                <li>Executed browser compatibility and regression tests with Selenium WebDriver for every new
-                                    build release.</li>
-                                <li>Developed Selenium scripts in TestNG for parameterization using Data Provider annotation.
-                                </li>
-                                <li>Used Git for version control of automation scripts.</li>
-                                <li>Tested REST API Web Services with REST plug-in and Postman tool.</li>
-                                <li>Performed BDD with Data Driven Test Automation Framework using Cucumber and Gherkins
-                                    language.</li>
-                                <li>Generated automation scripts for both REST and SOAP Web Services using Java and REST
-                                    Assured.</li>
-                                <li>Used log4J for logging during test execution.</li>
-                                <li>Reviewed Selenium automation scripts.</li>
-                                <li>Executed test cases locally, on VM machines, and using Selenium GRID.</li>
-                                <li>Performed data-driven testing using Selenium WebDriver, TestNG, and JDBC Connections.</li>
-                                <li>Used Maven for building and running the automation framework and sending automation reports
-                                    via email.</li>
-                                <li>Performed sanity tests for integrated components to determine eligibility for regression
-                                    testing.</li>
-                                <li>Used Apache Maven for project builds.</li>
-                                <li>Detected defects, communicated with developers using JIRA.</li>
-                                <li>Executed Selenium test scripts across different browsers and checked compatibility.</li>
-                                <li>Ensured clear communication on requirements and defect reports with software engineers.</li>
-                                <li>Troubleshot web page issues using browser-based developer tools.</li>
+                                <li>Process bi-weekly and semi-monthly payroll for 15+ clients, managing payroll tax deposits, quarterly Form 941 filings, and annual W-2/1099 preparation with 100% accuracy and on-time compliance.</li>
+                                <li>Perform full-cycle bookkeeping including accounts payable/receivable, bank reconciliations, and journal entries for 25+ small to mid-sized businesses across diverse industries.</li>
+                                <li>Execute month-end close procedures including GL account reconciliations, variance analysis, and preparation of financial statements (Balance Sheet, P&L, Cash Flow).</li>
+                                <li>Prepare individual (Form 1040) and business tax returns (1120, 1120-S, 1065) for CPA review, demonstrating strong knowledge of U.S. tax code and deduction optimization.</li>
+                                <li>Generate customized management reports and financial dashboards for clients, providing actionable insights to support business decision-making.</li>
+                                <li>Collaborate with CPAs and senior accountants to ensure compliance with federal and state tax regulations.</li>
+                                <li>Maintain accurate and organized financial records using QuickBooks Online and Desktop.</li>
+                                <li>Communicate regularly with clients regarding their financial status, tax obligations, and accounting questions.</li>
+                                <li>Assist with year-end audit preparation and tax planning strategies for clients.</li>
+                                <li>Train clients on QuickBooks functionality and best practices for financial record-keeping.</li>
                             </ul>
-                            <p><strong>Environment:</strong> Java, Selenium WebDriver, TestNG, Jenkins, Fire Path, Firebug,
-                                Eclipse, HTML, XML, XPath, Quality Center, Internet Explorer, Chrome, Oracle, Windows.</p>
+                            <p><strong>Tools & Software:</strong> QuickBooks Online, QuickBooks Desktop, ADP, Gusto, Microsoft Excel, Bill.com, Expensify.</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -106,72 +72,35 @@ function Experience() {
                     </div>
                 </div>
             </div>
-            <div class="modal" tabindex="-1" role="dialog" id="testAutomationEngineer">
+            
+            <div class="modal" tabindex="-1" role="dialog" id="taxAccountant">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title fs-5" id="staticBackdropLabel">Test Automation Engineer</h4>
+                            <h4 class="modal-title fs-5" id="staticBackdropLabel">Tax Accountant</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <h5 class="modal-title fs-5" id="staticBackdropLabel">General Motors, IL</h5>
-                            <p><strong>July 2020 - December 2022</strong></p>
+                            <h5 class="modal-title fs-5" id="staticBackdropLabel">Logic Accountants Pty Ltd - Rosebery, NSW, Australia</h5>
+                            <p><strong>April 2021 - April 2025</strong></p>
                             <ul>
-                                <li>Worked in an agile development environment with iterative releases and extensive coordination between developers, testers, and business analysts.</li>
-                                <li>Extensively automated regression and functional test suites using Selenium WebDriver and TestNG Annotations.</li>
-                                <li>Converted automation scripts to a new framework using Selenium WebDriver, Java, and TestNG.</li>
-                                <li>Wrote Selenium scripts for taking screenshots and handled mouse movements and hover actions using Selenium Actions class.</li>
-                                <li>Created data-driven and batch tests with Selenium WebDriver and performed exception handling.</li>
-                                <li>Used Maven and Selenium Grid for executing test suites on different platforms and browsers in parallel.</li>
-                                <li>Expert in grouping test suites, cases, and methods for regression and functional testing using TestNG Annotations like Groups, Parameter, Data Provider, and Tags.</li>
-                                <li>Managed dependencies and created test profiles using Maven for sanity and regression testing.</li>
-                                <li>Integrated Jenkins with Git for automated build schedules and version control.</li>
-                                <li>Utilized Linux/Unix commands for GitHub operations through the command line.</li>
-                                <li>Worked on distributed test automation execution as part of Continuous Integration using Selenium Grid and Jenkins.</li>
-                                <li>Practiced Agile Scrum and delivered test automation on time, ensuring build quality and coordinating testing activities.</li>
-                                <li>Participated in audit meetings and contributed to achieving QA testing goals.</li>
-                                <li>Tested application compatibility with Internet Explorer, Firefox, and Safari.</li>
-                                <li>Participated in Daily Scrum, Stand-up, walkthrough, and weekly assessment meetings with business analysts and developers.</li>
+                                <li>Managed payroll operations for 50+ clients across multiple industries, ensuring accurate wage calculations, superannuation contributions, and compliance with Australian tax regulations and ATO requirements.</li>
+                                <li>Conducted comprehensive bank and GL account reconciliations, identifying and resolving discrepancies totaling $500K+, improving financial reporting accuracy by 25%.</li>
+                                <li>Prepared and lodged BAS (Business Activity Statements), IAS (Instalment Activity Statements), and quarterly payroll tax returns for clients with revenue ranging from $100K to $5M.</li>
+                                <li>Performed month-end and year-end close procedures including accruals, depreciation schedules, and financial statement preparation for management and audit purposes.</li>
+                                <li>Automated monthly financial reporting processes using Excel macros, reducing close timeline by 30% and minimizing manual entry errors.</li>
+                                <li>Collaborated with clients and cross-functional teams to improve expense tracking, cash flow forecasting, and budget variance analysis.</li>
+                                <li>Developed and maintained Google Sheets-based tracking system for multi-client project management and deadline monitoring.</li>
+                                <li>Processed year-end tax returns for individuals and businesses, ensuring compliance with Australian taxation law.</li>
+                                <li>Advised clients on tax planning strategies, deductions, and compliance requirements.</li>
+                                <li>Maintained organized documentation for audit trails and regulatory compliance.</li>
+                                <li>Used Xero and Oracle ERP systems for financial data management and reporting.</li>
+                                <li>Trained junior staff on accounting procedures, software systems, and quality control processes.</li>
+                                <li>Participated in client meetings to discuss financial performance and provide strategic recommendations.</li>
                             </ul>
-                            <p><strong>Environment:</strong> Jira, Selenium WebDriver, TestNG, Oracle, Java, Ruby on Rails, HTML, XML, SQL, Windows, and Linux.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div><div class="modal" tabindex="-1" role="dialog" id="qaEngineer">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title fs-5" id="staticBackdropLabel">QA Engineer</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <h5 class="modal-title fs-5" id="staticBackdropLabel">Bank of New York, NJ</h5>
-                            <p><strong>January 2018 – June 2020</strong></p>
-                            <ul>
-                                <li>Executed manual and automated tests and reported defects by running automated tests.</li>
-                                <li>Reviewed results of all tests and reported anomalies into the defect tracking database.</li>
-                                <li>Created and enhanced test scripts to handle changes in the GUI and test environment using Selenium WebDriver and TestNG.</li>
-                                <li>Developed automation scripts for new enhancements using Selenium WebDriver and TestNG.</li>
-                                <li>Automated regression test cases using Selenium WebDriver.</li>
-                                <li>Created a Modular Driven Automation Framework from scratch.</li>
-                                <li>Automated web application testing using Java Selenium framework in an Agile environment.</li>
-                                <li>Reviewed test cases with development teams and product management; modified test cases based on feedback.</li>
-                                <li>Created XML-based test suites and integrated them with Jenkins for regular execution of automation scripts.</li>
-                                <li>Prepared test data for simultaneous and combined Trade testing, and created test cases and scripts based on functional specifications.</li>
-                                <li>Updated and maintained existing Selenium scripts.</li>
-                                <li>Created positive and negative assertions based on business requirements.</li>
-                                <li>Used Jenkins for continuous integration to schedule and run automated test scripts.</li>
-                                <li>Managed build processes using Git for each release, QA, Integration, and staging environments.</li>
-                                <li>Participated actively in daily Scrum meetings and bi-weekly Sprint releases.</li>
-                            </ul>
-                            <p><strong>Environment:</strong> Java, Selenium WebDriver, JUnit, Jenkins, Fire Path, Firebug, Eclipse, HTML, XML, XPath, Quality Center, Internet Explorer, Chrome, Oracle, Windows.</p>
+                            <p><strong>Tools & Software:</strong> Xero, Oracle ERP, QuickBooks, Microsoft Excel (Advanced Macros), Google Sheets, ATO Online Services.</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -188,5 +117,3 @@ function Experience() {
   }
   
   export default Experience;
-
-  

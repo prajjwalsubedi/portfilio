@@ -19,7 +19,7 @@ function Header() {
                           <a class="nav-link" href="#about">About</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#service">Service</a>
+                          <a class="nav-link" href="#service">Services</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="#experience">Experience</a>
@@ -34,7 +34,7 @@ function Header() {
                           <a class="nav-link" href="#contact">Contact</a>
                       </li>
                       <li class="nav-item">
-                          <a class="- btn btn-primary rounded ml-4" href="#contact">Hire Me</a>
+                          <a class="- btn btn-primary rounded ml-4" href="#contact">Contact Me</a>
                       </li>
                   </ul>
               </div>
@@ -48,15 +48,15 @@ function Header() {
               <div class="infos">
                   <h6 class="subtitle">Hello, I'm</h6>
                   <h6 class="title">Prajjwal Subedi</h6>
-                  <p>Software Development Engineer in Test</p>
+                  <p>Staff & Tax Accountant</p>
   
                   <div class="buttons pt-3">
-                        <a href="mailto:prajjwalsubedi95@gmail.com"><button class="btn btn-primary rounded">Hire Me!</button></a>
+                        <a href="mailto:prajjwalsubedi95@gmail.com"><button class="btn btn-primary rounded">Contact Me</button></a>
                         <a href="assets/resume/PRAJJWAL_SUBEDI_Resume.pdf"><button class="btn btn-dark rounded">DOWNLOAD CV</button></a>
                   </div>
   
                   <div class="socials mt-4">
-                      <a class="social-item" href="https://www.linkedin.com/in/prajjwal-subedi"><i class="ti-linkedin"></i></a>
+                      <a class="social-item" href="https://www.linkedin.com/in/prajjwalsubedi"><i class="ti-linkedin"></i></a>
                       <a class="social-item" href="https://github.com/prajjwalsubedi"><i class="ti-github"></i></a>
                       <a class="social-item" href="https://twitter.com/prazwolsubedi"><i class="ti-twitter"></i></a>
                   </div>
@@ -66,21 +66,21 @@ function Header() {
               </div>
           </div>
   
-          {/* <!-- Header-widget -->
-          <!-- <div class="widget">
+          {/* <!-- Header-widget --> */}
+          <div class="widget">
               <div class="widget-item">
-                  <h2>200+</h2>
-                  <p>Successful Deployments</p>
+                  <h2>75+</h2>
+                  <p>Clients Managed</p>
               </div>
               <div class="widget-item">
-                  <h2>456</h2>
-                  <p>Project Completed</p>
+                  <h2>4+</h2>
+                  <p>Years Experience</p>
               </div>
               <div class="widget-item">
-                  <h2>789</h2>
-                  <p>Awards Won</p>
+                  <h2>100%</h2>
+                  <p>Tax Compliance</p>
               </div>
-          </div> --> */}
+          </div>
       </header>
       {/* <!-- End of Page Header --> */}
       </div>
@@ -88,4 +88,3 @@ function Header() {
   }
   
   export default Header;
-  
