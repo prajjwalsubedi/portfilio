@@ -11,3 +11,205 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* CGT Desk product page additions. These intentionally reuse the portfolio's
+   existing Steller/Bootstrap typography and primary color. */
+.cgt-page {
+  padding-top: 72px;
+}
+
+.cgt-hero {
+  padding: 7rem 0 5rem;
+  background: linear-gradient(180deg, rgba(105, 90, 166, 0.08), rgba(255, 255, 255, 0));
+}
+
+.cgt-kicker {
+  display: inline-block;
+  margin-bottom: .75rem;
+  color: #695aa6;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .78rem;
+}
+
+.cgt-title {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cgt-lead {
+  max-width: 720px;
+  font-size: 1.12rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.cgt-note {
+  color: #777;
+  font-size: .9rem;
+}
+
+.cgt-preview-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 18px;
+  padding: 1.35rem;
+  box-shadow: 0 16px 45px rgba(30, 30, 55, .08);
+}
+
+.cgt-preview-top,
+.cgt-metric {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cgt-preview-top {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.cgt-preview-top span,
+.cgt-preview-foot {
+  color: #777;
+  font-size: .86rem;
+}
+
+.cgt-metric {
+  padding: .9rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cgt-metric strong {
+  color: #292929;
+}
+
+.cgt-preview-foot {
+  padding-top: 1rem;
+}
+
+.cgt-feature {
+  padding: 1.5rem;
+  border: 1px solid #ececf2;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.cgt-feature-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  color: #695aa6;
+  background: rgba(105, 90, 166, .09);
+  font-size: 1.15rem;
+}
+
+.cgt-feature p,
+.cgt-country span,
+.cgt-steps small {
+  color: #666;
+}
+
+.cgt-soft-section {
+  background: #f8f7fb;
+}
+
+.cgt-country {
+  height: 100%;
+  padding: 1.3rem;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #ececf2;
+}
+
+.cgt-country strong,
+.cgt-country span {
+  display: block;
+}
+
+.cgt-country span {
+  margin-top: .45rem;
+  font-size: .88rem;
+}
+
+.cgt-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.cgt-steps > div {
+  padding: 1.25rem;
+  border-top: 3px solid #695aa6;
+  background: #f8f7fb;
+  border-radius: 0 0 10px 10px;
+}
+
+.cgt-steps span,
+.cgt-steps strong,
+.cgt-steps small {
+  display: block;
+}
+
+.cgt-steps span {
+  color: #695aa6;
+  font-weight: 700;
+  margin-bottom: .7rem;
+}
+
+.cgt-steps small {
+  margin-top: .4rem;
+  line-height: 1.5;
+}
+
+.cgt-download-box {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 18px;
+  background: #292929;
+  color: #fff;
+}
+
+.cgt-download-box p {
+  max-width: 650px;
+  margin: 1rem auto 0;
+  color: rgba(255,255,255,.75);
+}
+
+.cgt-download-box button:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 991px) {
+  .cgt-hero {
+    padding-top: 5rem;
+  }
+
+  .cgt-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .cgt-actions .btn,
+  .cgt-download-box .btn {
+    display: block;
+    width: 100%;
+    margin: .6rem 0 0 !important;
+  }
+
+  .cgt-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .cgt-download-box {
+    padding: 2rem 1.25rem;
+  }
+}
