@@ -104,7 +104,7 @@ function Contact() {
                     </div>
                 </div>
                 <div id="map">
-                    <iframe src="https://snazzymaps.com/embed/61257"></iframe>
+                    <iframe title="Contact location" src="https://snazzymaps.com/embed/61257"></iframe>
                 </div>
             </section>
             {/* <!-- End of Contact Section --> */}
