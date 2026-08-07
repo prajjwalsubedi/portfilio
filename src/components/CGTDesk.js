@@ -7,17 +7,12 @@ function Feature({ icon, title, children }) {
                 <div className="cgt-feature-icon">
                     <i className={icon}></i>
                 </div>
-
                 <h5>{title}</h5>
-
-                <p className="mb-0">
-                    {children}
-                </p>
+                <p className="mb-0">{children}</p>
             </div>
         </div>
     );
 }
-
 
 function CGTDesk() {
     const [release, setRelease] = useState(null);
@@ -28,15 +23,17 @@ function CGTDesk() {
         const loadRelease = async () => {
             try {
                 const response = await fetch(
-                    'https://raw.githubusercontent.com/prajjwalsubedi/cgt-desk-updates/main/latest.json',
+                    'https://api.github.com/repos/prajjwalsubedi/cgt-desk-updates/releases/latest',
                     {
-                        cache: 'no-store'
+                        headers: {
+                            Accept: 'application/vnd.github+json'
+                        }
                     }
                 );
 
                 if (!response.ok) {
                     throw new Error(
-                        `Unable to load CGT Desk release information: ${response.status}`
+                        `Unable to load latest CGT Desk release: ${response.status}`
                     );
                 }
 
@@ -46,7 +43,6 @@ function CGTDesk() {
                 setReleaseError(false);
             } catch (error) {
                 console.error('CGT Desk release check failed:', error);
-
                 setRelease(null);
                 setReleaseError(true);
             } finally {
@@ -57,27 +53,41 @@ function CGTDesk() {
         loadRelease();
     }, []);
 
+    const assets = release?.assets || [];
 
-    const windowsDownload =
-        release?.windows?.downloadUrl || null;
+    const windowsAsset = assets.find(
+        asset =>
+            asset.name.toLowerCase().endsWith('.exe') &&
+            asset.name.toLowerCase().includes('setup')
+    );
 
-    const macIntelDownload =
-        release?.mac?.intel?.downloadUrl || null;
+    const macIntelAsset = assets.find(
+        asset =>
+            asset.name.toLowerCase().endsWith('.dmg') &&
+            asset.name.toLowerCase().includes('x64')
+    );
 
-    const macAppleSiliconDownload =
-        release?.mac?.appleSilicon?.downloadUrl || null;
+    const macArmAsset = assets.find(
+        asset =>
+            asset.name.toLowerCase().endsWith('.dmg') &&
+            asset.name.toLowerCase().includes('arm64')
+    );
 
+    const version = release?.tag_name
+        ? release.tag_name.replace(/^v/i, '')
+        : null;
+
+    const releaseDate = release?.published_at
+        ? new Date(release.published_at).toLocaleDateString()
+        : null;
 
     return (
         <main className="cgt-page">
-
             <section className="cgt-hero">
                 <div className="container">
-
                     <div className="row align-items-center">
 
                         <div className="col-lg-7">
-
                             <span className="cgt-kicker">
                                 Desktop Capital Gains Workpapers
                             </span>
@@ -95,7 +105,6 @@ function CGTDesk() {
                             </p>
 
                             <div className="cgt-actions">
-
                                 <a
                                     className="btn btn-primary rounded"
                                     href="#download"
@@ -109,100 +118,57 @@ function CGTDesk() {
                                 >
                                     View Features
                                 </a>
-
                             </div>
 
                             <p className="cgt-note mt-3">
                                 CGT Desk is currently in active development.
                                 Tax calculations should be reviewed before filing.
                             </p>
-
                         </div>
 
-
                         <div className="col-lg-5 mt-5 mt-lg-0">
-
                             <div className="cgt-preview-card">
 
                                 <div className="cgt-preview-top">
-                                    <strong>
-                                        Financial Year Portfolio
-                                    </strong>
-
-                                    <span>
-                                        FY 2026
-                                    </span>
+                                    <strong>Financial Year Portfolio</strong>
+                                    <span>FY 2026</span>
                                 </div>
-
 
                                 <div className="cgt-metric">
-                                    <span>
-                                        Closing cost balance
-                                    </span>
-
-                                    <strong>
-                                        $641,500
-                                    </strong>
+                                    <span>Closing cost balance</span>
+                                    <strong>$641,500</strong>
                                 </div>
-
 
                                 <div className="cgt-metric">
-                                    <span>
-                                        Market value
-                                    </span>
-
-                                    <strong>
-                                        $753,700
-                                    </strong>
+                                    <span>Market value</span>
+                                    <strong>$753,700</strong>
                                 </div>
-
 
                                 <div className="cgt-metric">
-                                    <span>
-                                        Realized gain
-                                    </span>
-
-                                    <strong>
-                                        $8,600
-                                    </strong>
+                                    <span>Realized gain</span>
+                                    <strong>$8,600</strong>
                                 </div>
-
 
                                 <div className="cgt-metric">
-                                    <span>
-                                        Unrealized gain
-                                    </span>
-
-                                    <strong>
-                                        $112,200
-                                    </strong>
+                                    <span>Unrealized gain</span>
+                                    <strong>$112,200</strong>
                                 </div>
-
 
                                 <div className="cgt-preview-foot">
-                                    Click report amounts to trace back to source
-                                    transactions.
+                                    Click report amounts to trace back to source transactions.
                                 </div>
 
                             </div>
-
                         </div>
 
                     </div>
-
                 </div>
             </section>
 
-
-
-            <section
-                className="section"
-                id="features"
-            >
+            <section className="section" id="features">
                 <div className="container">
 
                     <div className="text-center mb-5">
-
                         <h6 className="subtitle">
                             Built for detailed capital gains work
                         </h6>
@@ -210,9 +176,7 @@ function CGTDesk() {
                         <h2 className="section-title">
                             One place for assets, calculations and tax workpapers
                         </h2>
-
                     </div>
-
 
                     <div className="row">
 
@@ -220,11 +184,9 @@ function CGTDesk() {
                             icon="ti-stats-up"
                             title="Shares & Securities"
                         >
-                            Mandatory asset codes, parcel tracking, FIFO where
-                            applicable, holding periods, domestic and international
-                            shares.
+                            Mandatory asset codes, parcel tracking, FIFO where applicable,
+                            holding periods, domestic and international shares.
                         </Feature>
-
 
                         <Feature
                             icon="ti-exchange-vertical"
@@ -233,7 +195,6 @@ function CGTDesk() {
                             Buys, sells, swaps, transfers, staking, rewards, mining,
                             airdrops, fees and wallet or exchange tracking.
                         </Feature>
-
 
                         <Feature
                             icon="ti-home"
@@ -244,7 +205,6 @@ function CGTDesk() {
                             property-specific tax adjustments planned.
                         </Feature>
 
-
                         <Feature
                             icon="ti-import"
                             title="Excel & CSV Import"
@@ -253,7 +213,6 @@ function CGTDesk() {
                             detect duplicates and preserve source rows.
                         </Feature>
 
-
                         <Feature
                             icon="ti-location-pin"
                             title="Accounts & Statements"
@@ -261,7 +220,6 @@ function CGTDesk() {
                             Track where assets are held, link statement references
                             and reconcile quantities and values by account.
                         </Feature>
-
 
                         <Feature
                             icon="ti-files"
@@ -272,20 +230,14 @@ function CGTDesk() {
                         </Feature>
 
                     </div>
-
                 </div>
             </section>
 
-
-
             <section className="section cgt-soft-section">
-
                 <div className="container">
-
                     <div className="row">
 
                         <div className="col-lg-5">
-
                             <h6 className="subtitle">
                                 Supported jurisdictions
                             </h6>
@@ -296,87 +248,51 @@ function CGTDesk() {
 
                             <p>
                                 Choose the country when a file is created.
-                                CGT Desk then uses the appropriate tax-year
-                                structure, terminology and matching framework
-                                available for that file.
+                                CGT Desk then uses the appropriate tax-year structure,
+                                terminology and matching framework available for that file.
                             </p>
-
                         </div>
 
-
                         <div className="col-lg-7">
-
                             <div className="row">
 
                                 <div className="col-md-4 mb-3">
-
                                     <div className="cgt-country">
-
-                                        <strong>
-                                            United States
-                                        </strong>
-
-                                        <span>
-                                            Calendar or custom FY
-                                        </span>
-
+                                        <strong>United States</strong>
+                                        <span>Calendar or custom FY</span>
                                     </div>
-
                                 </div>
 
-
                                 <div className="col-md-4 mb-3">
-
                                     <div className="cgt-country">
-
-                                        <strong>
-                                            United Kingdom
-                                        </strong>
-
+                                        <strong>United Kingdom</strong>
                                         <span>
                                             Same-day, 30-day & Section 104 framework
                                         </span>
-
                                     </div>
-
                                 </div>
 
-
                                 <div className="col-md-4 mb-3">
-
                                     <div className="cgt-country">
-
-                                        <strong>
-                                            Australia
-                                        </strong>
-
+                                        <strong>Australia</strong>
                                         <span>
                                             Financial-year tracking with draft CGT
                                             workpaper support
                                         </span>
-
                                     </div>
-
                                 </div>
 
                             </div>
-
                         </div>
 
                     </div>
-
                 </div>
-
             </section>
 
-
-
             <section className="section">
-
                 <div className="container">
 
                     <div className="text-center mb-5">
-
                         <h6 className="subtitle">
                             Workflow
                         </h6>
@@ -384,84 +300,56 @@ function CGTDesk() {
                         <h2 className="section-title">
                             From statement to tax report
                         </h2>
-
                     </div>
-
 
                     <div className="cgt-steps">
 
                         <div>
                             <span>1</span>
-
-                            <strong>
-                                Create Entity File
-                            </strong>
-
+                            <strong>Create Entity File</strong>
                             <small>
                                 Country, entity, FY ending month and currency
                             </small>
                         </div>
 
-
                         <div>
                             <span>2</span>
-
-                            <strong>
-                                Import Transactions
-                            </strong>
-
+                            <strong>Import Transactions</strong>
                             <small>
                                 Match headings and verify the live preview
                             </small>
                         </div>
 
-
                         <div>
                             <span>3</span>
-
-                            <strong>
-                                Track & Reconcile
-                            </strong>
-
+                            <strong>Track & Reconcile</strong>
                             <small>
                                 Accounts, statements, lots and year-end values
                             </small>
                         </div>
 
-
                         <div>
                             <span>4</span>
-
-                            <strong>
-                                Generate Reports
-                            </strong>
-
+                            <strong>Generate Reports</strong>
                             <small>
                                 Preview, drill down, PDF or Excel
                             </small>
                         </div>
 
                     </div>
-
                 </div>
-
             </section>
-
-
 
             <section
                 className="section cgt-download-section"
                 id="download"
             >
-
                 <div className="container">
-
                     <div className="cgt-download-box text-center">
 
                         <h2>
                             Download CGT Desk
                         </h2>
-
 
                         {loadingRelease && (
                             <>
@@ -481,12 +369,10 @@ function CGTDesk() {
                             </>
                         )}
 
-
                         {!loadingRelease && releaseError && (
                             <>
                                 <p>
                                     Download information is temporarily unavailable.
-                                    Please try again shortly.
                                 </p>
 
                                 <div className="mt-4">
@@ -501,35 +387,36 @@ function CGTDesk() {
                             </>
                         )}
 
-
                         {!loadingRelease && release && (
                             <>
-
                                 <p>
                                     Download the latest CGT Desk desktop application
                                     for Windows or macOS.
                                 </p>
 
-
                                 <p className="cgt-note">
-                                    Current version: <strong>{release.version}</strong>
-                                    {release.releaseDate && (
+                                    {version && (
                                         <>
-                                            {' '}
-                                            · Released {release.releaseDate}
+                                            Current version:{' '}
+                                            <strong>{version}</strong>
+                                        </>
+                                    )}
+
+                                    {version && releaseDate && ' · '}
+
+                                    {releaseDate && (
+                                        <>
+                                            Released {releaseDate}
                                         </>
                                     )}
                                 </p>
 
-
                                 <div className="mt-4">
 
-                                    {windowsDownload ? (
+                                    {windowsAsset ? (
                                         <a
                                             className="btn btn-primary rounded"
-                                            href={windowsDownload}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
+                                            href={windowsAsset.browser_download_url}
                                         >
                                             Download for Windows
                                         </a>
@@ -543,46 +430,48 @@ function CGTDesk() {
                                         </button>
                                     )}
 
-
-                                    {macAppleSiliconDownload ? (
+                                    {macArmAsset && (
                                         <a
                                             className="btn btn-dark rounded ml-2"
-                                            href={macAppleSiliconDownload}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
+                                            href={macArmAsset.browser_download_url}
                                         >
                                             Mac Apple Silicon
                                         </a>
-                                    ) : null}
+                                    )}
 
-
-                                    {macIntelDownload ? (
+                                    {macIntelAsset && (
                                         <a
                                             className="btn btn-outline-light rounded ml-2"
-                                            href={macIntelDownload}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
+                                            href={macIntelAsset.browser_download_url}
                                         >
                                             Mac Intel
                                         </a>
-                                    ) : null}
+                                    )}
 
                                 </div>
 
+                                {release.html_url && (
+                                    <p className="mt-4 mb-0">
+                                        <a
+                                            href={release.html_url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            View release details
+                                        </a>
+                                    </p>
+                                )}
 
                                 <p className="cgt-note mt-4">
                                     CGT Desk is under active development.
                                     Review tax calculations and generated workpapers
                                     before relying on them for filing.
                                 </p>
-
                             </>
                         )}
 
                     </div>
-
                 </div>
-
             </section>
 
         </main>
